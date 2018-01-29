@@ -6,13 +6,19 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: distribution_centers {}
+label: "eCommerce"
+
+explore: distribution_centers {
+  hidden: yes
+}
 
 explore: etl_jobs {
   hidden: yes
 }
 
 explore: events {
+  label: "Website Events"
+  description: "Information about visits to the website, including how visitors found us, their browser and operating system, location, etc."
   join: users {
     type: left_outer
     sql_on: ${events.user_id} = ${users.id} ;;
@@ -39,6 +45,7 @@ explore: inventory_items {
 }
 
 explore: order_items {
+  description: "Information about orders, including the items for sale, the customers who purchased them, and distribution center of origin"
   join: users {
     type: left_outer
     sql_on: ${order_items.user_id} = ${users.id} ;;
