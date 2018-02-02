@@ -15,14 +15,14 @@ view: users {
   }
 
   dimension: city {
-    group_label: "Addess Information"
+    group_label: "Address Information"
     type: string
     sql: ${TABLE}.city ;;
     drill_fields: [zip, location]
   }
 
   dimension: country {
-    group_label: "Addess Information"
+    group_label: "Address Information"
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
@@ -77,14 +77,14 @@ view: users {
   }
 
   dimension: location {
-    group_label: "Addess Information"
+    group_label: "Address Information"
     type: location
     sql_latitude: ${latitude} ;;
     sql_longitude: ${longitude} ;;
   }
 
   dimension: state {
-    group_label: "Addess Information"
+    group_label: "Address Information"
     type: string
     sql: ${TABLE}.state ;;
     drill_fields: [city, zip, location]
@@ -97,7 +97,7 @@ view: users {
   }
 
   dimension: zip {
-    group_label: "Addess Information"
+    group_label: "Address Information"
     type: zipcode
     map_layer_name: us_zipcode_tabulation_areas
     sql: ${TABLE}.zip ;;
