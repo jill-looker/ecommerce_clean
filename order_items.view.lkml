@@ -111,6 +111,23 @@ view: order_items {
     drill_fields: [detail*]
   }
 
+  measure: order_count_formatted {
+    label: "Order Count"
+    hidden: yes
+    type: count_distinct
+    sql: ${order_id} ;;
+    drill_fields: [detail*]
+    html:
+   {% if value > 100 %}
+      <font color="darkgreen">{{ rendered_value }}</font>
+    {% elsif value > 50 %}
+      <font color="goldenrod">{{ rendered_value }}</font>
+    {% else %}
+      <font color="darkred">{{ rendered_value }}</font>
+    {% endif %} ;;
+
+}
+
   measure: total_sales {
     type: sum
     sql: ${sale_price} ;;
