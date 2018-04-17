@@ -133,6 +133,11 @@ view: order_items {
     sql: ${sale_price} ;;
     value_format_name: usd
     drill_fields: [detail*]
+    link: {
+      label: "Inventory Items Explore"
+      url: "explore/ecommerce_neat/order_items"
+      icon_url: "http://www.looker.com/favicon.ico"
+      }
   }
 
   measure: average_sales {

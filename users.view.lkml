@@ -86,6 +86,7 @@ view: users {
   dimension: state {
     group_label: "Address Information"
     type: string
+    map_layer_name: us_states
     sql: ${TABLE}.state ;;
     drill_fields: [city, zip, location]
   }
