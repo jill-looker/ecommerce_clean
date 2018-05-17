@@ -89,6 +89,10 @@ view: users {
     map_layer_name: us_states
     sql: ${TABLE}.state ;;
     drill_fields: [city, zip, location]
+    link: {
+      label: "Business Overview By State Dashboard"
+      url: "https://trainembed.corp.looker.com/embed/dashboards/1?State={{ value | url_encode }}"
+    }
   }
 
   dimension: traffic_source {
