@@ -73,9 +73,17 @@ view: order_items {
   }
 
   dimension: sale_price {
-    hidden: yes
+    hidden: no
     type: number
+    value_format_name: usd
     sql: ${TABLE}.sale_price ;;
+  }
+
+  dimension: sale_price_tier {
+    type: tier
+    tiers: [0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
+    style: integer
+    sql: ${sale_price} ;;
   }
 
   dimension_group: shipped {
