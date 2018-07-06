@@ -39,6 +39,12 @@ view: order_items {
     sql: ${TABLE}.delivered_at ;;
   }
 
+  dimension: delivery_time {
+    description: "The number of days between the order creation date and the order delivery date"
+    type: number
+    sql: DATEDIFF( day, ${created_raw}, ${delivered_raw}) ;;
+  }
+
   dimension: inventory_item_id {
     hidden: yes
     type: number
