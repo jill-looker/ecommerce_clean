@@ -3,9 +3,6 @@ connection: "events_ecommerce"
 # include all the views
 include: "*.view"
 
-# include all the dashboards
-include: "*.dashboard"
-
 label: "eCommerce"
 
 explore: distribution_centers {
@@ -86,6 +83,10 @@ explore: products {
   }
 }
 
+map_layer: regions {
+  file: "map.topojson"
+}
+
 explore: users {
   hidden: yes
-}
+  }
