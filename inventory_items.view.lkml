@@ -10,6 +10,7 @@ view: inventory_items {
   }
 
   dimension: cost {
+    label: "Cost"
     hidden: yes
     type: number
     sql: ${TABLE}.cost ;;
