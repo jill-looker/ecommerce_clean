@@ -10,7 +10,7 @@ explore: distribution_centers {
 }
 
 explore: events {
-  group_label: "Web Traffic"
+  group_label: "Web Traffic Events"
   label: "Website Events"
   description: "Information about visits to the website, including how visitors found us, their browser and operating system, location, etc."
   view_label: "Website Events"
